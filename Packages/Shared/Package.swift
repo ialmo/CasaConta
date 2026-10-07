@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Shared",
-    platforms: [.iOS(.v17), .macOS(.v14)],
+    platforms: [.iOS(.v17), .macOS(.v13)],
     products: [
         .library(name: "Shared", targets: ["Shared"])
     ],

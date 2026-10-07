@@ -7,6 +7,9 @@ let package = Package(
        .macOS(.v13)
     ],
     dependencies: [
+        
+        .package(path: "../Packages/Shared"),
+        
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.121.4"),
         // 🗄 An ORM for SQL and NoSQL databases.
@@ -21,6 +24,7 @@ let package = Package(
         .executableTarget(
             name: "Backend",
             dependencies: [
+                .product(name: "Shared", package: "Shared"),
                 .product(name: "Fluent", package: "fluent"),
                 .product(name: "FluentPostgresDriver", package: "fluent-postgres-driver"),
                 .product(name: "Vapor", package: "vapor"),
