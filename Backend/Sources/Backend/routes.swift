@@ -2,8 +2,8 @@ import Fluent
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get { req async throws in
-        try await req.view.render("index", ["title": "Hello Vapor!"])
+    app.get { req async in
+        "CasaConta API rodando"
     }
 
     app.get("hello") { req async -> String in

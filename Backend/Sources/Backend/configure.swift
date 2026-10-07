@@ -1,7 +1,6 @@
 import NIOSSL
 import Fluent
 import FluentPostgresDriver
-import Leaf
 import Vapor
 
 /// configures your application
@@ -20,7 +19,6 @@ func configure(_ app: Application) async throws {
 
     app.migrations.add(CreateTodo())
 
-    app.views.use(.leaf)
 
     // register routes
     try routes(app)
